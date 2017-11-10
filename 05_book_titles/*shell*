@@ -1,0 +1,75 @@
+~/sandbox/learn_ruby/05_book_titles$ irb
+irb(main):001:0> first_word? = truw
+SyntaxError: (irb):1: syntax error, unexpected '='
+first_word? = truw
+             ^
+	from /usr/bin/irb:11:in `<main>'
+irb(main):002:0> first_word? = true
+SyntaxError: (irb):2: syntax error, unexpected '='
+first_word? = true
+             ^
+	from /usr/bin/irb:11:in `<main>'
+irb(main):003:0> first_word = true
+=> true
+irb(main):004:0> 
+suraj@suraj-Lenovo-ideapad-510-15IKB:
+~/sandbox/learn_ruby/05_book_titles$ ruby book.rb 
+book.rb:16: syntax error, unexpected tIDENTIFIER, expecting ';' or '\n'
+  def upcase_word word first_word 
+                                 ^
+book.rb:22: syntax error, unexpected keyword_end, expecting end-of-input
+suraj@suraj-Lenovo-ideapad-510-15IKB:
+~/sandbox/learn_ruby/05_book_titles$ ruby book.rb 
+book.rb:27:in `<main>': undefined method `upcase' for #<Book:0x0000000261c108 @title="inferno"> (NoMethodError)
+Did you mean?  upcase_word
+suraj@suraj-Lenovo-ideapad-510-15IKB:
+~/sandbox/learn_ruby/05_book_titles$ ruby book.rb 
+book.rb:16:in `upcase_word': wrong number of arguments (given 1, expected 2) (ArgumentError)
+	from book.rb:27:in `<main>'
+suraj@suraj-Lenovo-ideapad-510-15IKB:
+~/sandbox/learn_ruby/05_book_titles$ ruby book.rb 
+Wowowow
+suraj@suraj-Lenovo-ideapad-510-15IKB:
+~/sandbox/learn_ruby/05_book_titles$ irb
+irb(main):001:0> [1, 3, 4, 8].includes? 4
+NoMethodError: undefined method `includes?' for [1, 3, 4, 8]:Array
+Did you mean?  include?
+	from (irb):1
+	from /usr/bin/irb:11:in `<main>'
+irb(main):002:0> [1, 3, 4, 8].include? 4
+=> true
+irb(main):003:0> [1, 3, 4, 8].include? 4
+=> true
+irb(main):004:0> 
+suraj@suraj-Lenovo-ideapad-510-15IKB:
+~/sandbox/learn_ruby/05_book_titles$ ruby book.rb 
+the
+suraj@suraj-Lenovo-ideapad-510-15IKB:
+~/sandbox/learn_ruby/05_book_titles$ ruby book.rb 
+the
+suraj@suraj-Lenovo-ideapad-510-15IKB:
+~/sandbox/learn_ruby/05_book_titles$ ruby book.rb 
+the
+suraj@suraj-Lenovo-ideapad-510-15IKB:
+~/sandbox/learn_ruby/05_book_titles$ ruby book.rb 
+the
+suraj@suraj-Lenovo-ideapad-510-15IKB:
+~/sandbox/learn_ruby/05_book_titles$ ruby book.rb 
+The
+suraj@suraj-Lenovo-ideapad-510-15IKB:
+~/sandbox/learn_ruby/05_book_titles$ irb
+irb(main):001:0> foo = ["la", "ma", "ha"]
+=> ["la", "ma", "ha"]
+irb(main):002:0> foo[0].replace(foo[0].upcase)
+=> "LA"
+irb(main):003:0> foo
+=> ["LA", "ma", "ha"]
+irb(main):004:0> foo = "my oh my"
+=> "my oh my"
+irb(main):005:0> foo[0].replace(foo[0].upcase)
+=> "M"
+irb(main):006:0> foo
+=> "my oh my"
+irb(main):007:0> foo.split[0].replace(foo[0].upcase)
+=> "M"
+irb(main):008:0> foo.split[0].replace(foo.split[0].upcase)
